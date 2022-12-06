@@ -27,7 +27,7 @@ namespace _06_11testcases
             RestResponse response = client.Execute(request);
 
             JObject output = JObject.Parse(response.Content);
-           //  Equals
+          
             Assert.AreEqual(cost, (double)output.SelectToken("postage_result.total_cost"));
 
 
